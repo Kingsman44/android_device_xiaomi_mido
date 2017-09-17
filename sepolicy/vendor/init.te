@@ -15,3 +15,6 @@ allow init sysfs_leds:lnk_file read;
 allow init sysfs:file setattr;
 
 allow init firmware_file:filesystem getattr;
+
+# USB HAL
+allow init vendor_file:file execute;
