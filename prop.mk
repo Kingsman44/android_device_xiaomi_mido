@@ -290,3 +290,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     spectrum.support=1 \
     persist.spectrum.kernel=Parallax
+
+# Fling Velocity
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.min.fling_velocity=160 \
+ro.max.fling_velocity=20000
