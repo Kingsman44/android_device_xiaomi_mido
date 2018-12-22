@@ -157,7 +157,8 @@ vendor.video.disable.ubwc=1
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so \
-ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.vendor.qti.am.reschedule_service=true
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
