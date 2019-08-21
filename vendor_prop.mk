@@ -135,7 +135,8 @@ persist.qfp=false
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false \
-vendor.hw.fm.init=0
+vendor.hw.fm.init=0 \
+ro.vendor.fm.use_audio_session=true
 
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
