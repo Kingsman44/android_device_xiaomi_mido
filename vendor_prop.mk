@@ -206,3 +206,7 @@ wifi.interface=wlan0
 # Wifi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.wfd.virtual=0
+
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q660-13149-1
