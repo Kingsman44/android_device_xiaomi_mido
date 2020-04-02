@@ -6,3 +6,7 @@ get_prop(platform_app, camera_prop)
 # FPS
 allow platform_app sysfs_fps:file { getattr open read };
 allow platform_app sysfs_leds:dir search;
+allow platform_app sysfs_battery_supply:dir search;
+allow platform_app sysfs_battery_supply:file { getattr open read };
+allow platform_app sysfs_kgsl:dir search;
+allow platform_app sysfs_kgsl:file { getattr open read };
