@@ -1012,6 +1012,12 @@ vendor/etc/perf/perfconfigstore.xml|dfa3a78fd24cba4b870a3cd04d657cc9962c8331
 vendor/etc/perf/targetconfig.xml|aa20c25397df1455206965737f82d44d44430e45
 vendor/etc/perf/targetresourceconfigs.xml|d9f9815764725df55e748bf4af4829e609dac853
 
+# Perf Game - from OnePlus6
+lib/libdolphin.so|bc32d9007b017efc904a3ad4fb64cde10d453b28
+lib/libqti-at.so|b7a141762aacb9d3819c98c191e94d6b83de7ffa
+lib64/libdolphin.so|699e7332b8a5a1217beef6acbe18b0c4c89a3fcc
+lib64/libqti-at.so|1a1c22ca37a7dc1aae4ef4660a734764ff1041d0
+
 # Peripheral manager - from LA.UM.8.6.r1-04400-89xx.0
 vendor/bin/pm-proxy|2ac2d0e897ccb4c9a96b6a4cd3d66c2ef66c5b61
 vendor/bin/pm-service|68a46996bcb9014ebc948990fd943c40206dd8f2
