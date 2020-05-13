@@ -136,6 +136,10 @@ PRODUCT_PACKAGES += \
     camera.msm8953 \
     libmm-qcamera
 
+# Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
 # Consumerir
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.xiaomi_mido
