@@ -321,6 +321,9 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.media.omx=0
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
