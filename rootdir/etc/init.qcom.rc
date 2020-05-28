@@ -501,6 +501,9 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     oneshot
 
 on property:dev.bootcomplete=1
-
     # Enable EAS PowerHAL
     setprop vendor.powerhal.init 1
+
+#add MIUI camera flag
+on property:sys.camera.miui.apk=*
+    setprop vendor.camera.miui.apk ${sys.camera.miui.apk}
