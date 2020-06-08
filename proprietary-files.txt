@@ -799,6 +799,16 @@ vendor/lib64/libfp_client.so|110307b89ac3777a42a2c9045fce528f26c918b8
 vendor/lib64/libfpnav.so|588301735456b31b09aa0779a7f46481056868dd
 vendor/lib64/libfpservice.so|7ca47dfa5e8be7c502f1ca3431ee2a46d38e1f43
 
+# ESE-Powermanager - from LA.UM.8.6.r1-04400-89xx.0
+product/lib/vendor.qti.esepowermanager@1.0.so|bff5c9cd9e6c0984bf65b7437ab70c4d095d87a5
+product/lib64/vendor.qti.esepowermanager@1.0.so|08914f5a066d117c50adaef03c62c7382b4aeaaf
+vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|1dc4d45b23a15177a90105b74c46a7540fcc14c9
+vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
+vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|dcc6a11f408ba83994af21e44d2c8b0b8d83d929
+vendor/lib/vendor.qti.esepowermanager@1.0.so|bff5c9cd9e6c0984bf65b7437ab70c4d095d87a5
+vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|acd480d79a6c7725e6e95455b64894023cfc404d
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|08914f5a066d117c50adaef03c62c7382b4aeaaf
+
 # FM Radio - from LA.UM.8.6.r1-04400-89xx.0
 vendor/bin/fm_qsoc_patches|82ab33e928933b8077e77c1532a58b61a3551932
 vendor/bin/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
