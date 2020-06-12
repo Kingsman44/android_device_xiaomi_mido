@@ -27,7 +27,10 @@ import android.content.SharedPreferences;
 import android.os.SELinux;
 import android.util.Log;
 import android.widget.Toast;
+import android.text.TextUtils;
 import com.xiaomi.parts.preferences.VibratorStrengthPreference;
+import com.xiaomi.parts.preferences.VibratorCallStrengthPreference;
+import com.xiaomi.parts.preferences.VibratorNotifStrengthPreference;
 
 import com.xiaomi.parts.R;
 
@@ -102,6 +105,10 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
+        VibratorStrengthPreference.restore(context);
+        VibratorCallStrengthPreference.restore(context);
+        VibratorNotifStrengthPreference.restore(context);
+
         FileUtils.setValue(DeviceSettings.BACKLIGHT_DIMMER_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_BACKLIGHT_DIMMER, 0));
 
@@ -129,7 +136,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
                     PREF_CONTRAST, CONTRAST_DEFAULT) + CONTRAST_OFFSET);
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
-            VibratorStrengthPreference.restore(context);
         }
 
         FileUtils.setValue(DeviceSettings.TORCH_1_BRIGHTNESS_PATH,

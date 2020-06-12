@@ -34,7 +34,9 @@
 	
     <!-- Vibration -->
     <string name="vibration_title">Vibration feedback</string>
-    <string name="vibration_strength_title">Vibration Strength</string>
+    <string name="vibration_strength_title">System Strength</string>
+    <string name="vibration_call_strength_title">Call Strength</string>
+    <string name="vibration_notif_strength_title">Notification Strength</string>
 
     <!-- Spectrum Profiles -->
     <string name="spectrum_profile_title">Spectrum</string>

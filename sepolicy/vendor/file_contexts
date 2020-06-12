@@ -73,3 +73,8 @@
 /sys/module/msm_thermal/core_control/enabled		u:object_r:sysfs_corecontrol:s0
 /sys/module/msm_thermal/parameters/enabled		u:object_r:sysfs_msmthermal:s0
 /sys/module/msm_thermal/vdd_restriction/enabled		u:object_r:sysfs_vddrestrict:s0
+
+# Vibration
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator(/.*)?           u:object_r:sysfs_vibrator:s0
+/sys/class/timed_output/vibrator/vmax_mv             u:object_r:sysfs_vibrator:s0
+/sys/class/timed_output/vibrator/vtg_level           u:object_r:sysfs_vibrator:s0
