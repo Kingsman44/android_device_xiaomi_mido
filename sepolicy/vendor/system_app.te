@@ -47,3 +47,6 @@ get_prop(system_app, gpuboost_prop);
 
 allow system_app cpuboost_prop:property_service set;
 get_prop(system_app, cpuboost_prop);
+
+# allow system apps to read battery status
+r_dir_file(system_app, sysfs_battery_supply)
