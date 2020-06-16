@@ -311,6 +311,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
+    init.spectrum.rc \
+    init.spectrum.sh \
     init.gpuboost.rc \
     init.gpuboost.sh \
     init.cpuboost.rc \
