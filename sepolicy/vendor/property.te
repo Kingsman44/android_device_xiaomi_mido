@@ -5,3 +5,6 @@ type vendor_camera_prop, property_type;
 type dirac_prop, property_type;
 
 type spectrum_prop, property_type;
+
+# GPUboost
+type gpuboost_prop, property_type;

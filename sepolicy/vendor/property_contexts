@@ -8,3 +8,6 @@ persist.spectrum.profile                      u:object_r:spectrum_prop:s0
 
 # HAL3
 persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
+
+# GPUboost
+persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
