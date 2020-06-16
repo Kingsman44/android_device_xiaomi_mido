@@ -43,3 +43,6 @@ allow system_app sysfs_touchboost:file { open read getattr write };
 
 allow system_app gpuboost_prop:property_service set;
 get_prop(system_app, gpuboost_prop);
+
+allow system_app cpuboost_prop:property_service set;
+get_prop(system_app, cpuboost_prop);

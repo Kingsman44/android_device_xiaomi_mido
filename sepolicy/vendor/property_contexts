@@ -11,3 +11,6 @@ persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
 
 # GPUboost
 persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
+
+# CPUboost
+persist.cpuboost.profile           u:object_r:cpuboost_prop:s0
