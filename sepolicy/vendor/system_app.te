@@ -38,3 +38,5 @@ allow system_app sysfs_fastcharge:file { open read getattr write };
 
 allow system_app sysfs:file { read  write };
 allow system_app vendor_file:file { getattr  read };
+
+allow system_app sysfs_touchboost:file { open read getattr write };
