@@ -37,6 +37,9 @@ ANCIENT_OFFICIAL=true
 # OTA for Gapps Variant only
 FORCE_OTA=true
 
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := ancient_mido
