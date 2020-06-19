@@ -74,3 +74,6 @@
 
 # Touchboost
 /sys/module/msm_performance/parameters/touchboost		u:object_r:sysfs_touchboost:s0
+
+# High Performance audio
+/sys/module/snd_soc_wcd9330/parameters/high_perf_mode		u:object_r:sysfs_highperfaudio:s0
