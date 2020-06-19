@@ -16,3 +16,4 @@ persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
 persist.cpuboost.profile           u:object_r:cpuboost_prop:s0
 
 persist.cpucore.profile            u:object_r:cpucore_prop:s0
+persist.lkm.profile		   u:object_r:lkm_prop:s0
