@@ -42,3 +42,7 @@ type sysfs_highperfaudio, sysfs_type, fs_type;
 
 # Touchboost
 type sysfs_touchboost, sysfs_type, fs_type;
+
+type sysfs_msmthermal, sysfs_type, fs_type;
+type sysfs_corecontrol, sysfs_type, fs_type;
+type sysfs_vddrestrict, sysfs_type, fs_type;
