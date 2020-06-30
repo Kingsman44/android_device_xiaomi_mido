@@ -63,3 +63,6 @@ allow system_app lkm_prop:property_service set;
 get_prop(system_app, lkm_prop);
 allow system_app tcp_prop:property_service set;
 get_prop(system_app, tcp_prop);
+
+allow system_app sysfs_msm_perf:dir { search };
+allow system_app sysfs_yintensity:file { read };
