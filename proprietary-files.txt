@@ -811,8 +811,8 @@ vendor/lib/vendor.qti.esepowermanager@1.0.so|bff5c9cd9e6c0984bf65b7437ab70c4d095
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|acd480d79a6c7725e6e95455b64894023cfc404d
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|08914f5a066d117c50adaef03c62c7382b4aeaaf
 
-# FM Radio - from LA.UM.8.6.r1-04400-89xx.0
-vendor/bin/fm_qsoc_patches|82ab33e928933b8077e77c1532a58b61a3551932
+# FM Radio - from LA.UM.8.6.2.r1-07600-89xx.0
+vendor/bin/fm_qsoc_patches|5b5accb606681fb1c7abc2efc8b5208ff220eb88
 vendor/bin/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
 vendor/etc/init/init.qti.fm.rc|07cb64e2109a900eb6e1da1950fddba954d0f8d6
 
