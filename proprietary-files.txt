@@ -1032,11 +1032,11 @@ lib/libqti-at.so|b7a141762aacb9d3819c98c191e94d6b83de7ffa
 lib64/libdolphin.so|699e7332b8a5a1217beef6acbe18b0c4c89a3fcc
 lib64/libqti-at.so|1a1c22ca37a7dc1aae4ef4660a734764ff1041d0
 
-# Peripheral manager - from LA.UM.8.6.r1-04400-89xx.0
-vendor/bin/pm-proxy|2ac2d0e897ccb4c9a96b6a4cd3d66c2ef66c5b61
-vendor/bin/pm-service|68a46996bcb9014ebc948990fd943c40206dd8f2
-vendor/lib/libperipheral_client.so|7c096cff421a96be6490e1f004a57ee3b6b6e088
-vendor/lib64/libperipheral_client.so|fe796ff65665d341ddaa5847c26504b96a8c78ee
+# Peripheral manager - from LA.UM.8.6.2.r1-07600-89xx.0
+vendor/bin/pm-proxy|6317be13e38a4f7e5005ef544ab36bc7fe9cc3fd
+vendor/bin/pm-service|fa484756ab4dc2f74871eb24dd8a01750a755c6c
+vendor/lib/libperipheral_client.so|022054d6b2428c5f505e812b55628555420e40a1
+vendor/lib64/libperipheral_client.so|0afe9a901303a7206e2e8ad7ae3e35779d1dbfb5
 
 # Power-off alarm - from LA.UM.8.6.2.r1-07600-89xx.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|c214e1f7de878aeebe642857d6283bbeca0c7a3e
