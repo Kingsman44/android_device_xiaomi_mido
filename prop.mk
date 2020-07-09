@@ -98,6 +98,7 @@ com.qc.hardware=true \
 debug.qc.hardware=true \
 debug.qctwa.preservebuf=1 \
 debug.qctwa.statusbar=1 \
+debug.cpurend.vsync=false \
 debug.sf.recomputecrop=0 \
 debug.sf.disable_backpressure=1 \
 dev.pm.dyn_samplingrate=1 \
