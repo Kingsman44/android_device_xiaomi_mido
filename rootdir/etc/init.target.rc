@@ -239,3 +239,8 @@ on boot
 # Backlight Dimmer
   chown system system /sys/module/mdss_fb/parameters/backlight_dimmer
   chmod 0660 /sys/module/mdss_fb/parameters/backlight_dimmer
+
+# Power Hal
+  chown system system /sys/kernel/hbtp/display_pwr
+  chmod 0660 /sys/kernel/hbtp/display_pwr
+
