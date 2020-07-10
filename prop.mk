@@ -100,7 +100,6 @@ debug.qctwa.preservebuf=1 \
 debug.qctwa.statusbar=1 \
 debug.sf.recomputecrop=0 \
 debug.sf.disable_backpressure=1 \
-debug.sf.enable_gl_backpressure=1 \
 dev.pm.dyn_samplingrate=1 \
 persist.demo.hdmirotationlock=false \
 persist.hwc.enable_vds=1 \
