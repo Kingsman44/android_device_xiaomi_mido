@@ -31,14 +31,10 @@
     <string name="torch_title">Torch</string>
     <string name="yellow_torch_brightness_title">Yellow Torch Brightness</string>
     <string name="white_torch_brightness_title">White Torch Brightness</string>
-    <string name="cameraflash_title">Camera Flash</string>
-    <string name="yellowflash_intensity_title">Yellow Light Intensity</string>
 	
     <!-- Vibration -->
     <string name="vibration_title">Vibration feedback</string>
-    <string name="vibration_strength_title">System Strength</string>
-    <string name="vibration_call_strength_title">Call Strength</string>
-    <string name="vibration_notif_strength_title">Notification Strength</string>
+    <string name="vibration_strength_title">Vibration Strength</string>
 
     <!-- Spectrum Profiles -->
     <string name="spectrum_profile_title">Spectrum</string>
@@ -54,8 +50,6 @@
     <string name="spectrum_ubattery">Ultra Battery</string>
 
     <string name="audio_title">Audio</string>
-    <string name="highperfaudio_title">Audio High Performance Mode</string>
-    <string name="highperfaudio_summary">Enable to get bettter performing audio</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Dirac Sound Enhancer</string>
@@ -247,10 +241,6 @@
     <string name="cpuboost_low">Low</string>
     <string name="cpuboost_disable">Disable</string>
 
-    <!-- LED Brightness -->
-    <string name="chargingled_title">Charging LED</string>
-    <string name="led_blinking_title">Blinking Intensity</string>
-
     <string name="thermal_title">Thermal</string>
     <string name="msmthermal_title">MSM Thermal</string>
     <string name="msmthermal_summary">Enable Thermal driver control</string>
@@ -271,34 +261,6 @@
     <string name="cpucore_five">5</string>
     <string name="cpucore_six">6</string>
     <string name="cpucore_seven">7</string>
-
-    <string name="misc_title">Miscellaneous</string>
-    <!-- LKM Profiles -->
-    <string name="lkmprofile_title">Low Memory Killer</string>
-    <string name="lkmprofile_summary">Low Memory Killer</string>
-    <string name="lkmprofile_dialogTitle">Choose your LKM profile</string>
-
-    <!-- Values for LKM Presets -->
-    <string name="lkmprofile_veryaggressive">Very Aggressive</string>
-    <string name="lkmprofile_aggressive">Aggressive</string>
-    <string name="lkmprofile_light">Light</string>
-    <string name="lkmprofile_medium">Medium</string>
-    <string name="lkmprofile_verylight">Very Light</string>
-    <string name="lkmprofile_default">Default</string>
-    <string name="lkmprofile_disable">Disable</string>
-
-    <!-- LKM Profiles -->
-    <string name="tcpcongestion_title">TCP Congestion</string>
-    <string name="tcpcongestion_summary">Transmission Control Protocol Congestion Algorithm</string>
-    <string name="tcpcongestion_dialogTitle">Choose your TCP Congestion Algorithm</string>
-
-    <!-- Values for LKM Presets -->
-    <string name="tcpcongestion_westwood">westwood</string>
-    <string name="tcpcongestion_cubic">cubic</string>
-    <string name="tcpcongestion_reno">reno</string>
-    <string name="tcpcongestion_bic">bic</string>
-    <string name="tcpcongestion_highspeed">highspeed</string>
-    <string name="tcpcongestion_htcp">htcp</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_category">SELinux</string>

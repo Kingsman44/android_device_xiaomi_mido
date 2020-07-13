@@ -31,13 +31,14 @@ import java.util.List;
 
 public class VibratorStrengthPreference extends CustomSeekBarPreference {
 
-    // from drivers/platform/msm/qpnp-haptic.c
+    // #define QPNP_HAP_VMAX_MIN_MV		116
+    // #define QPNP_HAP_VMAX_MAX_MV		3596
     private static int mMinVal = 116;
     private static int mMaxVal = 3596;
-    private static int mDefVal = 2007;
+    private static int mDefVal = mMaxVal - (mMaxVal - mMinVal) / 4;
     private Vibrator mVibrator;
 
-    private static final String FILE_LEVEL = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user";
+    private static final String FILE_LEVEL = "sys/class/leds/vibrator/vmax_mv_user";
     private static final long testVibrationPattern[] = {0,250};
 
     public VibratorStrengthPreference(Context context, AttributeSet attrs) {

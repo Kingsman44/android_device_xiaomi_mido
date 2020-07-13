@@ -34,8 +34,6 @@ allow system_app sysfs_fps:file rw_file_perms;
 allow system_app sysfs_torch:dir search;
 allow system_app sysfs_torch:file rw_file_perms;
 allow system_app sysfs_leds:dir { search };
-allow system_app sysfs_chargeled:file { open read getattr write };
-allow system_app sysfs_yintensity:file { open getattr write };
 allow system_app sysfs_fastcharge:file { open read getattr write };
 
 allow system_app sysfs:file { read  write };
@@ -49,8 +47,6 @@ get_prop(system_app, gpuboost_prop);
 allow system_app cpuboost_prop:property_service set;
 get_prop(system_app, cpuboost_prop);
 
-allow system_app sysfs_highperfaudio:file { open read getattr write };
-
 # allow system apps to read battery status
 r_dir_file(system_app, sysfs_battery_supply)
 
@@ -59,10 +55,5 @@ allow system_app sysfs_corecontrol:file { open read getattr write };
 allow system_app sysfs_vddrestrict:file { open read getattr write };
 allow system_app cpucore_prop:property_service set;
 get_prop(system_app, cpucore_prop);
-allow system_app lkm_prop:property_service set;
-get_prop(system_app, lkm_prop);
-allow system_app tcp_prop:property_service set;
-get_prop(system_app, tcp_prop);
 
 allow system_app sysfs_msm_perf:dir { search };
-allow system_app sysfs_yintensity:file { read };
