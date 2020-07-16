@@ -8,3 +8,4 @@ allow untrusted_app theme_prop:file { getattr };
 allow untrusted_app dalvikcache_data_file:file { execmod };
 allow untrusted_app proc:file { read };
 allow untrusted_app proc_zoneinfo:file { read };
+allow untrusted_app sysfs_kgsl:dir { search };
