@@ -18,3 +18,5 @@ allow untrusted_app_27 proc_net:file { open };
 allow untrusted_app_27 proc_version:file { open };
 allow untrusted_app_27 firmware_file:filesystem { getattr };
 allow untrusted_app_27 proc_zoneinfo:file { open };
+allow untrusted_app_27 proc_zoneinfo:file { getattr };
+allow untrusted_app_27 proc:file { read };
