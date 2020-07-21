@@ -1,1 +1,5 @@
 set_prop(netmgrd, vendor_xlat_prop)
+
+# execute shell and files in /system/
+allow netmgrd shell_exec:file rx_file_perms;
+allow netmgrd system_file:file rx_file_perms;

@@ -14,4 +14,3 @@ allow qti_init_shell self:socket create;
 allow qti_init_shell sysfs:file { write setattr };
 
 set_prop(qti_init_shell, power_prop);
-set_prop(qti_init_shell, sensors_panel_prop);
