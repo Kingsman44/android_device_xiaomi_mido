@@ -662,4 +662,7 @@
 
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
+
+    <!-- Whether Device support LiveDisplay or not -->
+    <bool name="config_liveDisplayAvailable">true</bool>
 </resources>
