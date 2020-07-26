@@ -361,3 +361,5 @@ on boot
   chown system system /sys/kernel/hbtp/display_pwr
   chmod 0660 /sys/kernel/hbtp/display_pwr
 
+on property:ro.config.low_ram=true
+    mount none /vendor/etc/permissions/go_handheld_core_hardware.xml /vendor/etc/permissions/handheld_core_hardware.xml bind
