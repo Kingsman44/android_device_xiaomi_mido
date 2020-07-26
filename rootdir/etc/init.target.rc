@@ -235,3 +235,6 @@ on boot
 # Backlight Dimmer
   chown system system /sys/module/mdss_fb/parameters/backlight_dimmer
   chmod 0660 /sys/module/mdss_fb/parameters/backlight_dimmer
+
+on property:ro.config.low_ram=true
+    mount none /vendor/etc/permissions/go_handheld_core_hardware.xml /vendor/etc/permissions/handheld_core_hardware.xml bind
