@@ -16,3 +16,9 @@ persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
 persist.cpuboost.profile           u:object_r:cpuboost_prop:s0
 
 persist.cpucore.profile            u:object_r:cpucore_prop:s0
+
+#Power HAL
+vendor.powerhal.state                            u:object_r:power_prop:s0
+vendor.powerhal.audio                            u:object_r:power_prop:s0
+vendor.powerhal.init                             u:object_r:power_prop:s0
+vendor.powerhal.rendering                        u:object_r:power_prop:s0
