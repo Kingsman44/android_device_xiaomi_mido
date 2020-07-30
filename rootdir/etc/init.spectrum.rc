@@ -1,30 +1,9 @@
+#!/system/bin/sh
+# SPECTRUM & FRANCO KERNEL MANAGERS
+# Profile initialization by Zile995
+
 # Initialization
 on property:sys.boot_completed=1
-   chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   chown system system /sys/module/workqueue/paramaters/power_efficient
-   chown system system /sys/module/msm_performance/parameters/touchboost
-   chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   chmod 0644 /sys/module/workqueue/parameters/power_efficient
-   chmod 0644 /sys/module/msm_performance/parameters/touchboost
-   chmod 0644 /sys/devices/system/cpu/cpufreq/interactive/*
-   chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
-   chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq
-   chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq
-   chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost
-   chown system system /sys/class/kgsl/kgsl-3d0/max_gpuclk
-   chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
-   chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq
-   chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq
-   chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/adrenoboost
-   chmod 0644 /sys/class/kgsl/kgsl-3d0/max_gpuclk
-   chown system system /sys/block/mmcblk0/queue/scheduler
-   chown system system /sys/block/mmcblk0/queue/read_ahead_kb
-   chmod 0644 /sys/block/mmcblk0/queue/scheduler
-   chmod 0644 /sys/block/mmcblk0/queue/read_ahead_kb
 
 # Set default profile on first boot
     exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
@@ -35,37 +14,31 @@ on property:sys.boot_completed=1
    setprop spectrum.support 1
 
 # Add kernel name
-   setprop persist.spectrum.kernel parallax
+   setprop persist.spectrum.kernel mido-treble
 
 # Balance (default profile)
 on property:persist.spectrum.profile=0
     # CPU
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
-    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 1401600:40000"
-    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 85
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 60000
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 480000
-    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1401600
-    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "80 652800:57 1036800:67 1401600:75 1689600:80 1843200:85 1958400:87"
-    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 39000
-    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay 0
-    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 0
-    write /sys/devices/system/cpu/cpufreq/interactive/ignore_hispeed_on_notif 0
-    write /sys/devices/system/cpu/cpufreq/interactive/fast_ramp_down 0
-    write /sys/devices/system/cpu/cpufreq/interactive/align_windows 1
-    write /sys/devices/system/cpu/cpufreq/interactive/enable_prediction 0
-    write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 0
-    write /sys/module/msm_performance/parameters/touchboost 1
     write /sys/module/workqueue/parameters/power_efficient Y
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1036800
+    write /sys/module/cpu_boost/parameters/input_boost_ms 1000
+    write /sys/class/kgsl/kgsl-3d0/idle_timer 80
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 650000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 133330000
+    write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 133
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 4
+    write /sys/class/leds/lcd-backlight/max_brightness 255
 
     # GPU
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/governor bw_hwmon
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/max_freq 7104
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq 1611
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/governor cpufreq
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/max_freq 5859
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/min_freq 1611
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 1024
@@ -83,23 +56,26 @@ on property:persist.spectrum.profile=0
 # Performance
 on property:persist.spectrum.profile=1
     # CPU
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1036800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
-    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 1843200:40000"
-    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 50
-    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1843200
-    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
-    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1401600:80"
-    write /sys/module/msm_performance/parameters/touchboost 1
-    write /sys/module/workqueue/parameters/power_efficient N
+    write /sys/module/workqueue/parameters/power_efficient Y
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2208000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1401600
+    write /sys/module/cpu_boost/parameters/input_boost_ms 1250
+    write /sys/class/kgsl/kgsl-3d0/idle_timer 80
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 650000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 133330000
+    write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 133
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 4
+    write /sys/class/leds/lcd-backlight/max_brightness 255
 
     # GPU
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/governor bw_hwmon
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/max_freq 7104
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq 1611
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/governor cpufreq
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/max_freq 7104
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/min_freq 1611
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
@@ -117,23 +93,26 @@ on property:persist.spectrum.profile=1
 # Battery
 on property:persist.spectrum.profile=2
     # CPU
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1689600
-    write /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias 600
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 66666
-    write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 100
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate_min 10000
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor 1
-    write /sys/devices/system/cpu/cpufreq/ondemand/ignore_nice_load 0
-    write /sys/module/msm_performance/parameters/touchboost 0
     write /sys/module/workqueue/parameters/power_efficient Y
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1689600
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1036800
+    write /sys/module/cpu_boost/parameters/input_boost_ms 750
+    write /sys/class/kgsl/kgsl-3d0/idle_timer 64
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 560000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 560000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 133330000
+    write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 133
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 4
+    write /sys/class/leds/lcd-backlight/max_brightness 127
 
     # GPU
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 510000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 510000000
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/governor bw_hwmon
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/max_freq 6445
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq 1611
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/governor cpufreq
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/max_freq 5859
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/min_freq 1611
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 128
@@ -146,17 +125,26 @@ on property:persist.spectrum.profile=2
 # Gaming
 on property:persist.spectrum.profile=3
     # CPU
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1401600
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
-    write /sys/module/msm_performance/parameters/touchboost 1
     write /sys/module/workqueue/parameters/power_efficient N
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2208000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1036800
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1689600
+    write /sys/module/cpu_boost/parameters/input_boost_ms 1500
+    write /sys/class/kgsl/kgsl-3d0/idle_timer 1000000
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 725000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 725000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 725000000
+    write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 725
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 0
+    write /sys/class/leds/lcd-backlight/max_brightness 225
 
     # GPU
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 510000000
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/governor bw_hwmon
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/max_freq 7104
+    write /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq 4248
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/governor bw_hwmon
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/max_freq 7104
+    write /sys/devices/soc/soc:qcom,mincpubw/devfreq/soc:qcom,mincpubw/min_freq 7104
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 4096
