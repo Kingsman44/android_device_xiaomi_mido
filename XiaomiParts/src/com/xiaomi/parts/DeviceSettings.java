@@ -100,6 +100,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_CPUBOOST = "cpuboost";
     public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.cpuboost.profile";
 
+    public static final String PREF_CAMERA = "camera";
+    public static final String CAMERA_SYSTEM_PROPERTY = "persist.camera.profile";
+
     private static final String SELINUX_CATEGORY = "selinux";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
@@ -128,6 +131,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingSwitchPreference mTouchboost;
     private SecureSettingListPreference mGPUBOOST;
     private SecureSettingListPreference mCPUBOOST;
+    private SecureSettingListPreference mCamera;
     private static Context mContext;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
@@ -301,8 +305,13 @@ public class DeviceSettings extends PreferenceFragment implements
         mSelinuxPersistence.setChecked(getContext()
         .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
         .contains(PREF_SELINUX_MODE));
-    }
 
+        // HAL3|HAL1 Switch button profiles
+        mCamera = (SecureSettingListPreference) findPreference(PREF_CAMERA);
+        mCamera.setValue(FileUtils.getStringProp(CAMERA_SYSTEM_PROPERTY, "0"));
+        mCamera.setSummary(mCamera.getEntry());
+        mCamera.setOnPreferenceChangeListener(this);
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
@@ -393,6 +402,12 @@ public class DeviceSettings extends PreferenceFragment implements
                 mCPUBOOST.setValue((String) value);
                 mCPUBOOST.setSummary(mCPUBOOST.getEntry());
                 FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY, (String) value);
+                break;
+
+            case PREF_CAMERA:
+                mCamera.setValue((String) value);
+               	mCamera.setSummary(mCamera.getEntry());
+                FileUtils.setStringProp(CAMERA_SYSTEM_PROPERTY, (String) value);
                 break;
 
             case PREF_SELINUX_MODE:

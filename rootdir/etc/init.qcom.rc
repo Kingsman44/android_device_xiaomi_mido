@@ -32,6 +32,7 @@ import /vendor/etc/init/hw/init.spectrum.rc
 import /vendor/etc/init/hw/init.gpuboost.rc
 import /vendor/etc/init/hw/init.cpuboost.rc
 import /vendor/etc/init/hw/init.parallax.rc
+import /vendor/etc/init/hw/init.camera.rc
 
 on early-init
     # Disable EAS
