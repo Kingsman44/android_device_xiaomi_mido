@@ -246,6 +246,14 @@ on charger
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
 
+    # Create an stune group for the camera-daemon
+    mkdir /dev/stune/camera-daemon
+    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
+    write /dev/stune/camera-daemon/schedtune.boost 0
+    chown system system /dev/stune/camera-daemon
+    chown system system /dev/stune/camera-daemon/tasks
+    chmod 0660 /dev/stune/camera-daemon/tasks
+
 # Update cpusets on boot and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-6
