@@ -43,3 +43,7 @@ type sysfs_touchboost, sysfs_type, fs_type;
 type sysfs_msmthermal, sysfs_type, fs_type;
 type sysfs_corecontrol, sysfs_type, fs_type;
 type sysfs_vddrestrict, sysfs_type, fs_type;
+
+type debugfs_rpm, debugfs_type, fs_type;
+type debugfs_power_stats, fs_type, debugfs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;

@@ -36,3 +36,11 @@ genfscon sysfs /sys/kernel/sound_control/speaker_gain                       u:ob
 
 # USB force fastcharge
 genfscon sysfs /sys/kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0
+
+genfscon debugfs /rpm_stats     u:object_r:debugfs_rpm:s0
+genfscon debugfs /system_stats  u:object_r:debugfs_rpm:s0
+
+genfscon sysfs /devices/soc/soc:qcom,cpubw                                    u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,mincpubw                                 u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu0                              u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu4                              u:object_r:sysfs_devfreq:s0
