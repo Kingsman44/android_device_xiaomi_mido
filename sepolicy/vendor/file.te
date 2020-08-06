@@ -47,3 +47,5 @@ type sysfs_vddrestrict, sysfs_type, fs_type;
 type debugfs_rpm, debugfs_type, fs_type;
 type debugfs_power_stats, fs_type, debugfs_type;
 type sysfs_msm_subsys, sysfs_type, fs_type;
+
+type sysfs_dex2oat, sysfs_type, fs_type;

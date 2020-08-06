@@ -1,0 +1,1 @@
+allow sysfs_dex2oat vendor_file:file { read };
