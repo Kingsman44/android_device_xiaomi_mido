@@ -28,7 +28,7 @@ allow hal_power_default sysfs_graphics:file rw_file_perms;
 allow hal_power_default sysfs_sectouch:dir search;
 allow hal_power_default sysfs_sectouch:file w_file_perms;
 allow hal_power_default debugfs_power_stats:file { r_file_perms };
-allow hal_power_default debugfs:file { write };
+allow hal_power_default debugfs:file { open read write };
 
 # To get/set powerhal state property
 set_prop(hal_power_default, power_prop)
