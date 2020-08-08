@@ -205,6 +205,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PROVISIONED=1 \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
+persist.data.iwlan=1 \
+persist.data.iwlan.ipsec.ap=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.radio.multisim.config=dsds \
 persist.sys.fflag.override.settings_network_and_internet_v2=true \
@@ -212,6 +214,7 @@ persist.vendor.radio.apm_sim_not_pwdn=1 \
 persist.vendor.radio.custom_ecc=1 \
 persist.vendor.radio.hw_mbn_update=0 \
 persist.vendor.radio.rat_on=combine \
+persist.vendor.data.iwlan.enable=true \
 persist.vendor.radio.sib16_support=1 \
 ril.subscription.types=NV,RUIM \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
@@ -222,6 +225,10 @@ service.qti.ims.enabled=1 \
 ro.telephony.iwlan_operation_mode=legacy \
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 telephony.lteOnCdmaDevice=1 \
+persist.radio.VT_ENABLE=1 \
+persist.radio.volte.dan_support=true \
+persist.vendor.data.iwlan.enable=true \
+persist.vendor.sys.cnd.iwlan=1 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
