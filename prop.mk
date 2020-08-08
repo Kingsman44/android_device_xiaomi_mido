@@ -65,7 +65,7 @@ persist.camera.isp.clock.optmz=0 \
 persist.camera.stats.test=5 \
 persist.vendor.qti.telephony.vt_cam_interface=2 \
 vidc.enc.dcvs.extra-buff-count=2 \
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.motorola.faceunlock
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.motorola.faceunlock,com.google.android.GoogleCamera
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
