@@ -12,3 +12,5 @@ allow priv_app init_exec:lnk_file { getattr };
 allow priv_app mnt_vendor_file:dir { getattr };
 allow priv_app mnt_vendor_file:lnk_file { getattr };
 allow priv_app unlabeled:file { getattr };
+allow priv_app proc_net:file { read };
+allow priv_app bg_boot_complete_prop:file { read };
