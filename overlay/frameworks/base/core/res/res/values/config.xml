@@ -696,4 +696,7 @@
     <integer-array name="config_keyboardTapVibePattern">
         <item>10</item>
     </integer-array>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">false</bool>
 </resources>
