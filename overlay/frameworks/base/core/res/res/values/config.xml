@@ -781,4 +781,16 @@
 
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
+
+    <array name="config_batteryPackageTypeService">
+        <item>com.google.android.gms</item>
+        <item>com.google.android.apps.gcs</item>
+    </array>
+    <array name="config_priorityOnlyDndExemptPackages">
+        <item>com.google.android.dialer</item>
+    </array>
+
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
+    <bool name="config_allowDisablingAssistDisclosure">true</bool>
 </resources>
