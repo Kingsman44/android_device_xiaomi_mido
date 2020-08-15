@@ -221,6 +221,7 @@ ril.subscription.types=NV,RUIM \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,22 \
+persist.vendor.radio.aosp_usr_pref_sel=true \
 ro.telephony.use_old_mnc_mcc_format=true \
 persist.vendor.radio.multisim_switch_support=true \
 service.qti.ims.enabled=1 \
