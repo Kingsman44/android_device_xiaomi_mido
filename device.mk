@@ -38,7 +38,8 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/pixel
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -325,6 +326,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.mido-libperfmgr \
+    android.hardware.power.stats@1.0-service.xiaomi_mido \
     powerhint.json
 
 PRODUCT_COPY_FILES += \
