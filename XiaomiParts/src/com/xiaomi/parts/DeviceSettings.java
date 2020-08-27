@@ -60,7 +60,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_VIBSTRENGTH = "vib_strength";    
     public static final String KEY_CALL_VIBSTRENGTH = "vib_call_strength";
     public static final String KEY_NOTIF_VIBSTRENGTH = "vib_notif_strength";
-
+    
     public static final String CATEGORY_DISPLAY = "display";
     public static final String PREF_DEVICE_KCAL = "device_kcal";
 
