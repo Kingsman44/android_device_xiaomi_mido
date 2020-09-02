@@ -401,3 +401,5 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/lirc0                0660   system     system
 /dev/peel_ir              0660   system     system
 
+#for ir
+/dev/spidev6.1            0660   system    system
