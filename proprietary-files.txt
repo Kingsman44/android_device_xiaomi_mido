@@ -743,6 +743,9 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|cb930c66271392a7e0139fb9d1a
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|dfedda144d19622e3e579186033da2b7f3c80d32
 vendor/lib64/vendor.qti.latency@2.0.so|72645a214e8675680862af236420d8195651f29d
 
+# Consumer IR - from Daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
+vendor/lib64/hw/consumerir.default.so|391a679b915a433e1ab16806c3c92de839a9531d
+
 # DPM - from LA.UM.8.6.2.r1-08400-89xx.0
 product/bin/dpmd|6c511e3e4293705777b563b45d7c216207a6ead0
 product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
