@@ -89,9 +89,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Compile libhwui in performance mode
 HWUI_COMPILE_FOR_PERF := true
 
-# Compile libhwui in performance mode
-HWUI_COMPILE_FOR_PERF := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 TARGET_NO_BOOTLOADER := true
