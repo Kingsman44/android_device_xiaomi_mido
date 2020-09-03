@@ -16,9 +16,6 @@ allow init sysfs:file setattr;
 
 allow init firmware_file:filesystem getattr;
 
-# USB HAL
-allow init vendor_file:file execute;
-
 # Allow init to chown/chmod on pseudo files in /sys
 allow init sysfs_type:file { setattr };
 
