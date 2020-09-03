@@ -1,5 +1,5 @@
 allow untrusted_app_27 vendor_file:file { getattr  read };
-allow untrusted_app_27 serialno_prop:file { read };
+allow untrusted_app_27 serialno_prop:file { read getattr };
 allow untrusted_app_27 app_data_file:file { execute  execute_no_trans };
 allow untrusted_app_27 anr_data_file:dir { read };
 allow untrusted_app_27 theme_prop:file { read };
@@ -27,3 +27,6 @@ allow untrusted_app_27 mnt_vendor_file:dir { search };
 allow untrusted_app_27 persist_camera_prop:file { read open write };
 allow untrusted_app_27 proc:file { open };
 allow untrusted_app_27 sysfs:file { getattr };
+allow untrusted_app_27 adb_data_file:dir { getattr };
+allow untrusted_app_27 cgroup:dir { read };
+allow untrusted_app_27 rootfs:dir { read };
