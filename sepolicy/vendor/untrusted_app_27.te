@@ -30,3 +30,5 @@ allow untrusted_app_27 sysfs:file { getattr };
 allow untrusted_app_27 adb_data_file:dir { getattr };
 allow untrusted_app_27 cgroup:dir { read };
 allow untrusted_app_27 rootfs:dir { read };
+allow untrusted_app_27 proc_net_tcp_udp:file { read };
+allow untrusted_app_27 proc_tty_drivers:file { read };
