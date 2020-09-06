@@ -785,19 +785,6 @@
     <!-- Whether usage of the proximity sensor during doze is supported -->
     <bool name="doze_proximity_sensor_supported">false</bool>
 
-    <!-- Haptic -->
-    <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>21</item>
-        <item>30</item>
-    </integer-array>
-
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>0</item>
-        <item>15</item>
-        <item>30</item>
-    </integer-array>
-
     <integer-array name="config_keyboardTapVibePattern">
         <item>20</item>
     </integer-array>
