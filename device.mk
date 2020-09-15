@@ -38,8 +38,7 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/xiaomi
+    $(LOCAL_PATH)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -156,7 +155,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service \
-    android.hardware.ir@1.0-service.xiaomi
+    android.hardware.ir@1.0-service.xiaomi_mido
 
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
