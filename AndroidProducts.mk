@@ -15,3 +15,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/revengeos_mido.mk
+COMMON_LUNCH_CHOICES := \
+    revengeos_mido-eng \
+    revengeos_mido-userdebug \
+    revengeos_mido-user
