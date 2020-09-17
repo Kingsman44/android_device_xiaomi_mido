@@ -319,7 +319,17 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.spectrum.rc \
+    init.spectrum.sh \
+    init.gpuboost.rc \
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh \
+    init.parallax.rc \
+    init.parallax.sh \
+    init.camera.rc \
+    init.camera.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -423,3 +433,7 @@ PRODUCT_BOOT_JARS += \
 # Signapk
 PRODUCT_HOST_PACKAGES += \
     signapk
+
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts

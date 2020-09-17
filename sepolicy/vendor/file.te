@@ -18,3 +18,24 @@ type persist_sensors_file, file_type, vendor_persist_type;
 
 # Touchscreen
 type proc_touchpanel, fs_type, sysfs_type, proc_type;
+
+# XiaomiParts
+type kcal_dev, sysfs_type, fs_type;
+type sysfs_backlight, sysfs_type, fs_type;
+type sysfs_egain, sysfs_type, fs_type;
+type sysfs_hgain, sysfs_type, fs_type;
+type sysfs_mgain, sysfs_type, fs_type;
+type sysfs_sgain, sysfs_type, fs_type;
+type sysfs_fcharge, sysfs_type, fs_type;
+type sysfs_tbrightness, sysfs_type, fs_type;
+type sysfs_headgain, sysfs_type, fs_type;
+type sysfs_micgain, sysfs_type, fs_type;
+type sysfs_torch, sysfs_type, fs_type;
+type sysfs_fastcharge, sysfs_type, fs_type;
+
+# Touchboost
+type sysfs_touchboost, sysfs_type, fs_type;
+
+type sysfs_msmthermal, sysfs_type, fs_type;
+type sysfs_corecontrol, sysfs_type, fs_type;
+type sysfs_vddrestrict, sysfs_type, fs_type;
