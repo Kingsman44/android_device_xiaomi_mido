@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/mido/device.mk)
 # Inherit some common Revenge stuff.
 $(call inherit-product, vendor/revengeos/config/common.mk)
 
+$(call inherit-product, vendor/gapps/config.mk)
+$(call inherit-product, vendor/pixelstyle/config.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
 PRODUCT_NAME := revengeos_mido
@@ -43,3 +46,10 @@ BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-
 
 # RevengeOS extras
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
